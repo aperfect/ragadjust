@@ -29,33 +29,36 @@ module Ragadjust
 
           # prepositions
           if %w{prepositions all}.include? method
-            content = content.gsub preps, '\2&nbsp;'
+            # content = content.gsub preps, '\2&nbsp;'
+            content = content.gsub preps, '\2'+nbsp
             puts "Content after preps: #{content}"
           end
 
           # small words
           if %w{small-words all}.include? method
-            content = content.gsub smallwords, '\2&nbsp;'
+            # content = content.gsub smallwords, '\2&nbsp;'
+            content = content.gsub smallwords, '\2'+nbsp
             puts "Content after small words: #{content}"
           end
 
           # dashes
           if %w{dashes all}.include? method
-            content = content.gsub dashes, '\1&nbsp;'
+            # content = content.gsub dashes, '\1&nbsp;'
+            content = content.gsub dashes, '\1'+nbsp
             puts "Content after dashes: #{content}"
           end
 
-          # node.content = ''
+          node.content = content
           # puts "Setting inner_html to: #{content}"
           # node.parent.inner_html = content
           # puts "Node parent inner_html = #{node.parent.inner_html}"
-          dummy = node.add_previous_sibling(Nokogiri::XML::Node.new('dummy', html))
-          new_node = Nokogiri::XML::Text.new('', html)
-          new_node.inner_html = content
-          
-          dummy.add_previous_sibling(new_node)
-          node.remove
-          dummy.remove
+          # dummy = node.add_previous_sibling(Nokogiri::XML::Node.new('dummy', html))
+          # new_node = Nokogiri::XML::Text.new('', html)
+          # new_node.inner_html = content
+
+          # dummy.add_previous_sibling(new_node)
+          # node.remove
+          # dummy.remove
         end
 
       end
@@ -80,6 +83,11 @@ module Ragadjust
       html.css('body').inner_html
 
     end # def self.ragadjust_content
+
+    def self.nbsp
+      ' '
+    end
+
 
   end
 
