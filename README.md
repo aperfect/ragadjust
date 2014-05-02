@@ -18,7 +18,19 @@ Or install it yourself as:
 
 ## Usage
 
-    Ragadjust::Adjust.ragadjust_content(text_to_adjust, selector = 'p, li, dd, figcaption', method = 'all')
+    Ragadjust::Adjust.ragadjust_content(text_to_adjust, selector, method = 'all')
+
+`selector` defaults to:
+
+     'p, li, dd, figcaption'
+
+`method` options:
+
+    'all'
+    'prepositions' - only rag-adjust prepositions
+    'small-words' - only adjust 1-/2-letter words
+    'dashes' - only adjust space after dashes
+    'emphasis' - only adjust within emphasis tags (em, strong, i, b)
 
 ## Contributing
 
