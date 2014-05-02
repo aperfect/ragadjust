@@ -50,7 +50,7 @@ module Ragadjust
           s = el.content.split.size
           if s > 1 && s < 4
             # Get text nodes
-            el.search('//text()').each do |n|
+            el.search('.//text()').each do |n|
               if n.text?
                 n.content = n.content.gsub /\s+/, nbsp
               end
