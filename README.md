@@ -6,7 +6,7 @@ Gem to rag-adjust text content based on Mark Boulton's 24ways article: http://24
 
 Add this line to your application's Gemfile:
 
-    gem 'ragadjust'
+    gem 'ragadjust', github: 'aperfect/ragadjust'
 
 And then execute:
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Ragadjust::Adjust.ragadjust_content(text_to_adjust, selector = 'p, li, dd, figcaption', method = 'all')
 
 ## Contributing
 
