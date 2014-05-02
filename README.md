@@ -20,13 +20,13 @@ Or install it yourself as:
 
     Ragadjust::Adjust.ragadjust_content(text_to_adjust, selector, method = 'all')
 
-`selector` defaults to:
+`selector` takes a CSS selector and defaults to:
 
      'p, li, dd, figcaption'
 
 `method` options:
 
-    'all'
+    'all' - default: apply adjustment to all the below
     'prepositions' - only rag-adjust prepositions
     'small-words' - only adjust 1-/2-letter words
     'dashes' - only adjust space after dashes
