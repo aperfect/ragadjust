@@ -61,7 +61,7 @@ module Ragadjust
 
       # avoid orphaned words at end of headings
       if orphans
-        elements.css('h1,h2,h3,h4,h5.h6').each do |el|
+        html.css('h1,h2,h3,h4,h5.h6').each do |el|
           last_text = el.search('.//text()').last
 
           last_text.content = last_text.content.gsub(/\s+([[:word:]]+)$/, '&nbsp;\1')
