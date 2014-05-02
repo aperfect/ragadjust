@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-Ragadjust::Adjust.ragadjust_content(text_to_adjust, selector = 'p, li, dd, figcaption', method = 'all')
+    Ragadjust::Adjust.ragadjust_content(text_to_adjust, selector = 'p, li, dd, figcaption', method = 'all')
 
 ## Contributing
 
