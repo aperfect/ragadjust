@@ -52,7 +52,7 @@ module Ragadjust
             # Get text nodes
             el.search('//text()').each do |n|
               if n.text?
-                n.gsub /\s+/, nbsp
+                n.content = n.content.gsub /\s+/, nbsp
               end
             end
           end
