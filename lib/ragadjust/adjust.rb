@@ -52,7 +52,7 @@ module Ragadjust
             # Get text nodes
             el.search('//text()').each do |n|
               if n.text?
-                Ragadjust::Adjust.text_node_replace n, /\s+/, nbsp
+                n.gsub /\s+/, nbsp
               end
             end
           end

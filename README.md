@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-    Ragadjust::Adjust.ragadjust_content(text_to_adjust, selector, method = 'all')
+    Ragadjust::Adjust.ragadjust_content(text_to_adjust, selector, method)
 
 `selector` takes a CSS selector and defaults to:
 
