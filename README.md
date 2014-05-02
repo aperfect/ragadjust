@@ -6,7 +6,7 @@ Gem to rag-adjust text content based on Mark Boulton's 24ways article: http://24
 
 Add this line to your application's Gemfile:
 
-    gem 'ragadjust', github: 'aperfect/ragadjust'
+    gem 'ragadjust'
 
 And then execute:
 
@@ -39,3 +39,6 @@ Or install it yourself as:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+
+Questions or suggestions, please email github@adamperfect.com
