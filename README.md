@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-    Ragadjust::Adjust.ragadjust_content(text_to_adjust, selector, method)
+    Ragadjust::Adjust.ragadjust_content(text_to_adjust, selector, method, orphans)
 
 `selector` takes a CSS selector and defaults to:
 
@@ -31,6 +31,8 @@ Or install it yourself as:
     'small-words' - only adjust 1-/2-letter words
     'dashes' - only adjust space after dashes
     'emphasis' - only adjust within emphasis tags (em, strong, i, b)
+
+`orphans` defaults to true and will add a non-breaking space before the last word in an h1-h6 tag
 
 ## Contributing
 
