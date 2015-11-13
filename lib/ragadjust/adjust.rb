@@ -64,7 +64,7 @@ module Ragadjust
         html.css('h1,h2,h3,h4,h5.h6').each do |el|
           last_text = el.search('.//text()').last
 
-          last_text.content = last_text.content.gsub(/\s+([[:word:]]+)$/, nbsp+'\1')
+          last_text.content = self.prevent_orphans last_text.content
         end
 
       end
@@ -72,6 +72,10 @@ module Ragadjust
       html.css('body').inner_html
 
     end # def self.ragadjust_content
+
+    def self.prevent_orphans(text_to_adjust)
+      text_to_adjust.gsub(/\s+([[:word:]]+)$/, nbsp+'\1')
+    end
 
     def self.nbsp
       ' '
