@@ -64,7 +64,9 @@ module Ragadjust
         html.css('h1,h2,h3,h4,h5.h6').each do |el|
           last_text = el.search('.//text()').last
 
-          last_text.content = self.prevent_orphans last_text.content
+          if last_text.content
+            last_text.content = self.prevent_orphans last_text.content
+          end
         end
 
       end
