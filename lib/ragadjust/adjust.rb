@@ -9,7 +9,7 @@ module Ragadjust
     def self.ragadjust_content(text_to_adjust, selector = 'p, li, dd, figcaption', method = 'all', orphans = true)
       html = Nokogiri::HTML(text_to_adjust) # Not using .fragment() as .search() doesn't seem to work?
 
-      preps = /(?<=\s|^|;)((aboard|about|above|across|after|against|along|amid|among|anti|around|before|behind|below|beneath|beside|besides|between|beyond|concerning|considering|despite|down|during|except|excepting|excluding|following|from|inside|into|like|minus|near|onto|opposite|outside|over|past|plus|regarding|round|save|since|than|that|this|through|toward|towards|under|underneath|unlike|until|upon|versus|with|within|without)\s)+/i
+      preps = /(?<=\s|^|;)((aboard|about|above|across|after|against|along|amid|among|anti|around|before|behind|below|beneath|beside|besides|between|beyond|concerning|considering|despite|down|during|except|excepting|excluding|following|from|inside|into|like|minus|near|onto|opposite|outside|over|past|plus|regarding|round|save|since|than|that|this|through|toward|towards|under|underneath|unlike|until|upon|versus|with|within|without)\s)/i
           
       smallwords = /(?<=\s|^|;)\b(([[:word:]]{1,2})\b\s)/i
       
